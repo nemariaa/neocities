@@ -1,0 +1,360 @@
+	:root {
+		/** you can change all this to fit your own styles without having to touch the rest of the code! **/
+
+		--body-background: #fff;
+		--main-background: #fff;
+		--text: #333;
+		--accent: #16a9b8;
+		--accent-dark: #1a7882;
+		--accent-light: #dbeef2;
+		--highlight-color: #aee6ec;
+		--fandom-button: #eaeaea;
+
+		/** these are default browser font styles, but you can name specific fonts, ex. 'Georgia'**/
+		--main-font: sans-serif;
+		--h1-font: monospace;
+		--h2-font: monospace;
+		--h3-font: sans-serif;
+
+		--fic-metadata-divider: " // "; /** change this to your liking **/
+
+		/** these can be changed to solid, dotted, dashed, double, and none. it combines with border-size in some cases **/
+		--main-border-style: solid;
+		--link-border-style: dotted; /** links only, also can be wavy **/
+		--hr-style: dotted;
+
+		/** some sizing, which you can change but I highly advise for you to keep the provided units (em, %, and px respectively). smaller than 1 can be used as decimals, e.g. 0.8 **/
+		--base-size: 1em;
+		--line-height: 150%;
+		--main-width: 60em;
+		--border-size: 2px;
+
+		/** calculations for sizing, you might not want to touch these **/
+		--size-quarter: calc(var(--base-size) / 4);
+		--size-half: calc(var(--base-size) / 2);
+		--size-one-half: calc(var(--base-size) * 1.5);
+		--size-double: calc(var(--base-size) * 2);
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		-webkit-text-size-adjust: none;
+	}
+
+	p,
+	details {
+		padding: var(--size-half) 0;
+	}
+
+	ul,
+	ol {
+		margin: var(--base-size) var(--size-double);
+	}
+
+	li {
+		padding-left: var(--base-size);
+	}
+
+	body {
+		background: var(--body-background);
+		color: var(--text);
+		font: normal var(--base-size) / var(--line-height) var(--main-font);
+	}
+
+	totop{
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		background: var(--main-background);
+		padding: var(--base-size);
+		border-top-left-radius: 30px;
+	}
+
+	main {
+		background: var(--main-background);
+		width: var(--main-width);
+		margin: 0 auto;
+		padding: var(--size-one-half);
+	}
+
+	#head {
+		margin: 0 auto;
+		padding: var(--size-one-half) 0;
+		border-bottom: var(--border-size) var(--main-border-style) var(--accent);
+		text-align: center;
+	}
+
+	#blurb {
+		padding: var(--size-double) 0;
+		border-bottom: var(--border-size) var(--main-border-style) var(--accent);
+	}
+
+	.filterFic {
+		width: auto;
+		margin: 15px 0;
+		display: none;
+	}
+
+	fic-summary {
+		padding: 10px 0;
+		margin: 0 20px;
+		display: block;
+	}
+
+	fic-summary p {
+		padding: 0 0 0.5em;
+		margin: 0;
+	}
+
+	fic-summary p:last-child {
+		padding: 0;
+	}
+
+	.show {
+		display: block;
+	}
+
+	#fandom-navigation {
+		margin: var(--size-double) 0 0;
+	}
+
+	.masterlist {
+		margin: 10px 0;
+		overflow: hidden;
+	}
+
+	#footer {
+		border-top: var(--border-size) var(--main-border-style)  var(--accent);
+		margin: var(--base-size) 0 0;
+		padding: var(--size-double) 0 0;
+		text-align: center;
+		text-transform: lowercase;
+		font-size: calc(var(--base-size) * 0.85);
+	}
+
+	.fandomButton {
+		border: none;
+		outline: none;
+		padding: var(--base-size);
+		background-color: var(--fandom-button);
+		display: inline-block;
+		margin: var(--size-quarter) var(--size-quarter) var(--size-quarter) 0;
+		font-size: var(--base-size);
+		color: var(--text);
+		font-family: var(--main-font);
+	}
+
+	.fandomButton:hover {
+		background-color: var(--accent-dark);
+		color: white;
+	}
+
+	.fandomButton.active {
+		background-color: var(--accent);
+		color: white;
+	}
+
+	.filterFic ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.filterFic ul li {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+
+	.filterFic ul li:after {
+		content: var(--fic-metadata-divider);
+		color: var(--accent);
+	}
+
+	.filterFic ul li:last-child:after {
+		content: " ";
+	}
+
+	h1 {
+		font: normal 2.5em var(--h1-font);
+		text-transform: lowercase;
+		color: var(--accent);
+		padding: var(--size-half) 0;
+	}
+
+	#head h1 {
+		padding-bottom: 0;
+	}
+
+	h2 {
+		font: italic 1.5em var(--h2-font);
+		text-transform: lowercase;
+		padding: 0 0 var(--base-size);
+	}
+
+	#head h2 {
+		padding-top: var(--size-half);
+	}
+
+	h3 {
+		font-size: var(--size-one-half);
+		font-family: var(--h3-font);
+		color: var(--accent-dark);
+		margin: var(--base-size) 0 var(--size-half);
+	}
+
+	h4 {
+		/** this is a custom header that isn't used anywhere outside of the preview, feel free to modify or remove it for your own use **/
+		color: var(--accent-dark);
+		text-transform: uppercase;
+		font: normal 1.2em var(--h3-font);
+		letter-spacing: 2px;
+		margin: var(--size-half) 0;
+		text-align: center;
+	}
+
+	strong {
+		color: var(--accent-dark);
+	}
+
+	em {
+		color: var(--accent);
+	}
+
+	mark {
+		background-color: var(--highlight-color);
+	}
+
+	a:link,
+	a:visited {
+		color: var(--accent);
+		text-decoration-line: var(--link-border-style);
+		-webkit-text-decoration-line: var(--link-border-style);
+		text-decoration: underline;
+		text-decoration-style: var(--link-border-style);
+		text-decoration-thickness: var(--border-size);
+		text-decoration-color: var(--accent);
+		-webkit-text-decoration-color: var(--accent);
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		color: var(--accent-dark);
+		text-decoration-line: var(--link-border-style);
+		-webkit-text-decoration-line: var(--link-border-style);
+		text-decoration: underline;
+		text-decoration-style: var(--main-border-style);
+		text-decoration-thickness: var(--border-size);
+		text-decoration-color: var(--accent-dark);
+		-webkit-text-decoration-color: var(--accent-dark);
+		box-shadow: inset 0px -5px 0 0px var(--accent-light);
+	}
+
+	summary:hover, details[open] > summary{
+		color: var(--accent-dark);
+		font-weight: bold;
+	}
+
+	code {
+		font: normal var(--base-size) monospace;
+		background: #dadada;
+	}
+
+	hr {
+		border-top: none;
+		border-bottom: var(--border-size) var(--hr-style) var(--accent);
+		margin: var(--size-one-half) 0;
+	}
+
+	blockquote {
+		margin: var(--base-size) 0;
+		padding: var(--size-half) var(--size-one-half);
+		border-left: var(--size-half) var(--main-border-style) var(--accent);
+	}
+
+	spoiler {
+		background: var(--text)!important;
+		color: var(--text)!important;
+	}
+
+	spoiler::selection {
+		color: var(--text);
+		background: var(--main-background);
+	}
+
+	spoiler::-moz-selection{
+		color: var(--text);
+		background: var(--main-background);
+	}
+
+	img{
+		max-width: 100%;;
+	}
+
+	@media (max-width: 900px) {
+		main {
+			width: 95vw;
+			padding: var(--base-size);
+		}
+	}
+
+	@media (max-width: 600px) {
+		main {
+			width: 95%;
+			padding: var(--base-size) 0.5em;
+		}
+		#head,
+		#blurb,
+		#footer {
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.2em;
+		}
+		.fandomButton {
+			font-size: 0.95em;
+			padding: 0.5em 0.7em;
+			margin-bottom: 0.3em;
+		}
+		.filterFic ul {
+			margin: 0.5em 0.5em;
+		}
+		.filterFic {
+			margin: 10px 0;
+			padding: 0 0.2em;
+		}
+
+		totop{
+			display: none; /** hides to top link on mobile, but you can comment or delete this to keep it visible **/
+		}
+	}
+
+	@media (max-width: 400px) {
+		h1 {
+			font-size: 1.8em;
+		}
+		h2 {
+			font-size: 1.3em;
+		}
+		.fandomButton {
+			font-size: 0.85em;
+			padding: 0.4em 0.5em;
+		}
+	}
+
+	/** this is how i styled the details specifically for this preview so they're easier to read, but you can do whatever you want with this. or delete it, if you don't think you'll use it **/
+
+	details.init{ 
+		padding: var(--base-size);
+	}
+	details.alt{
+		background: var(--accent-light);
+	}
