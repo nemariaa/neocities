@@ -180,7 +180,8 @@ li::marker {
 a:link,
 a:visited {
 	color: var(--accent);
-	-webkit-text-decoration-line: var(--link-border-style);
+	text-decoration-line: var(--link-border-style);
+    -webkit-text-decoration-line: var(--link-border-style);
 	text-decoration: underline;
 	text-decoration-style: var(--link-border-style);
 	text-decoration-thickness: var(--border-size);
@@ -192,6 +193,7 @@ a:hover,
 a:active,
 a:focus {
 	color: var(--accent-dark);
+    text-decoration-line: var(--link-border-style);
 	-webkit-text-decoration-line: var(--link-border-style);
 	text-decoration: underline;
 	text-decoration-style: var(--main-border-style);
