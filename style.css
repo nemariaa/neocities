@@ -30,6 +30,7 @@
 		--border-size: 2px;
 
 		/** calculations for sizing, you might not want to touch these **/
+		--size-eighth: calc(var(--base-size) / 8);
 		--size-quarter: calc(var(--base-size) / 4);
 		--size-half: calc(var(--base-size) / 2);
 		--size-one-half: calc(var(--base-size) * 1.5);
@@ -272,8 +273,8 @@
 
 	blockquote {
 		margin: var(--base-size) 0;
-		padding: var(--size-half) var(--size-one-half);
-		border-left: var(--size-half) var(--main-border-style) var(--accent);
+		padding: var(--size-quarter) var(--base-size);
+		border-left: var(--size-eighth) var(--main-border-style) var(--accent);
 	}
 
 	spoiler {
