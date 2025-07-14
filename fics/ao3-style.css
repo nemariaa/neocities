@@ -18,7 +18,7 @@ can steal my code instead of yours P:
     --accent: #16a9b8;
     --accent-dark: #337378;
     --accent-light: #aadadf;
-    --blockquote-background: #eee;
+    --blockquote-background: #fff;
     --title-color: #16a9b8;
     --title-size: 2.5em;
     --width: 60em;
@@ -26,6 +26,18 @@ can steal my code instead of yours P:
     --border-style: solid; /** solid, dotted, dashed, double, hidden, none. cannot be wavy **/
     --link-border-style: dotted; /** solid, dotted, dashed, double, wavy, none **/
     --hr-border-style: dotted; /** solid, dotted, dashed, double, hidden, none. cannot be wavy **/
+    /** some sizing, which you can change but I highly advise for you to keep the provided units (em, %, and px respectively). smaller than 1 can be used as decimals, e.g. 0.8 **/
+		--base-size: 1em;
+		--line-height: 150%;
+		--main-width: 60em;
+		--border-size: 2px;
+
+		/** calculations for sizing, you might not want to touch these **/
+		--size-eighth: calc(var(--base-size) / 8);
+		--size-quarter: calc(var(--base-size) / 4);
+		--size-half: calc(var(--base-size) / 2);
+		--size-one-half: calc(var(--base-size) * 1.5);
+		--size-double: calc(var(--base-size) * 2);
 }
 
 * {
@@ -208,6 +220,7 @@ blockquote {
     background: var(--blockquote-background);
     padding: 1em;
     margin: 0.5em auto 1em;
+	border-left: var(--size-eighth) var(--border-style) var(--accent);
 }
 
 .userstuff { 
@@ -222,6 +235,7 @@ blockquote {
 
 blockquote.userstuff {
     background: inherit;
+    border-left: none;
 }
 
 blockquote.userstuff blockquote {
