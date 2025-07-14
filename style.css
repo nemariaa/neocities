@@ -4,8 +4,8 @@
 		--body-background: #fff;
 		--main-background: #fff;
 		--text: #333;
-		--accent: #16a9b8;
-		--accent-dark: #1a7882;
+		--accent: #008D84;
+		--accent-dark: #005a54;
 		--accent-light: #dbeef2;
 		--highlight-color: #aee6ec;
 		--fandom-button: #eaeaea;
@@ -35,6 +35,8 @@
 		--size-half: calc(var(--base-size) / 2);
 		--size-one-half: calc(var(--base-size) * 1.5);
 		--size-double: calc(var(--base-size) * 2);
+		--size-triple: calc(var(--base-size) * 3);
+		--size-quadruple: calc(var(--base-size) * 4);
 	}
 
 	.darkmode{
@@ -93,7 +95,7 @@
 
 	#head {
 		margin: 0 auto;
-		padding: var(--size-one-half) 0;
+		padding: var(--size-half) 0 var(--size-one-half) 0;
 		border-bottom: var(--border-size) var(--main-border-style) var(--accent);
 		text-align: center;
 	}
@@ -287,6 +289,37 @@
 		border-left: var(--size-eighth) var(--main-border-style) var(--accent);
 	}
 
+	#theme-switch {
+		height: var(--size-quadruple);
+  	width: var(--size-quadruple);
+		padding: var(--size-quarter);
+		border-radius: 50%;
+		background-color: var(--fandom-button);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute; /* change to fixed if you want the button to scroll with the page & always be visible */
+		top: 20px;
+		right: 20px;
+		border: none;
+	}
+
+	#theme-switch svg {
+		fill: var(--accent);
+	}
+
+	#theme-switch svg:last-child {
+		display: none;
+	}
+
+	.darkmode #theme-switch svg:first-child {
+		display: none;
+	}
+
+	.darkmode #theme-switch svg:last-child {
+		display: block;
+	}
+
 	spoiler {
 		background: var(--text)!important;
 		color: var(--text)!important;
@@ -343,6 +376,13 @@
 			padding: 0 0.2em;
 		}
 
+		#theme-switch {
+			height: var(--size-triple);
+			width: var(--size-triple);
+			top: 10px;
+			right: 10px;
+		}
+
 		totop{
 			display: none; /** hides to top link on mobile, but you can comment or delete this to keep it visible **/
 		}
@@ -358,5 +398,12 @@
 		.fandomButton {
 			font-size: 0.85em;
 			padding: 0.4em 0.5em;
+		}
+
+		#theme-switch {
+			height: var(--size-double);
+			width: var(--size-double);
+			top: 10px;
+			right: 10px;
 		}
 	}
