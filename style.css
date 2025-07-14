@@ -12,7 +12,7 @@
 
 		/** these are default browser font styles, but you can name specific fonts, ex. 'Georgia'**/
 		--main-font: sans-serif;
-		--h1-font: monospace;
+		--h1-font: "Princess Sofia";
 		--h2-font: monospace;
 		--h3-font: sans-serif;
 
@@ -95,7 +95,7 @@
 
 	#head {
 		margin: 0 auto;
-		padding: var(--size-half) 0 var(--size-one-half) 0;
+		padding: var(--size-half) 0 var(--base-size) 0;
 		border-bottom: var(--border-size) var(--main-border-style) var(--accent);
 		text-align: center;
 	}
@@ -192,10 +192,10 @@
 	}
 
 	h1 {
-		font: normal 2.5em var(--h1-font);
+		font: normal 3em var(--h1-font);
 		text-transform: lowercase;
 		color: var(--accent);
-		padding: var(--size-half) 0;
+		padding: var(--size-quarter) 0;
 	}
 
 	#head h1 {
