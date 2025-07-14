@@ -26,7 +26,7 @@
 		/** some sizing, which you can change but I highly advise for you to keep the provided units (em, %, and px respectively). smaller than 1 can be used as decimals, e.g. 0.8 **/
 		--base-size: 1em;
 		--line-height: 150%;
-		--main-width: 60em;
+		--main-width: 95vw;
 		--border-size: 2px;
 
 		/** calculations for sizing, you might not want to touch these **/
