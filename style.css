@@ -1,14 +1,14 @@
 	:root {
 		/** you can change all this to fit your own styles without having to touch the rest of the code! **/
 
-		--body-background: #fff;
-		--main-background: #fff;
+		--body-background: #cfe0de;
+		--main-background: #cfe0de;
 		--text: #333;
 		--accent: #008D84;
 		--accent-dark: #005a54;
 		--accent-light: #dbeef2;
 		--highlight-color: #aee6ec;
-		--fandom-button: #eaeaea;
+		--fandom-button: #bbd4d1;
 
 		/** these are default browser font styles, but you can name specific fonts, ex. 'Georgia'**/
 		--main-font: sans-serif;
@@ -162,12 +162,12 @@
 
 	.fandomButton:hover {
 		background-color: var(--accent-dark);
-		color: white;
+		color: rgb(219, 219, 219);
 	}
 
 	.fandomButton.active {
 		background-color: var(--accent);
-		color: white;
+		color: #e4e4e4;
 	}
 
 	.filterFic ul {
