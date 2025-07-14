@@ -228,8 +228,8 @@ blockquote {
 }
 
 .userstuff blockquote {
-    border-top: var(--border-size) var(--border-style) var(--accent);
-    border-bottom: var(--border-size) var(--border-style) var(--accent);
+    /* border-top: var(--border-size) var(--border-style) var(--accent);
+    border-bottom: var(--border-size) var(--border-style) var(--accent); */
     background: inherit;
 }
 
@@ -238,9 +238,10 @@ blockquote.userstuff {
     border-left: none;
 }
 
+/* applies to blockquotes within the fic summary */
 blockquote.userstuff blockquote {
     background: var(--blockquote-background);
-    border: none;
+    border-left: var(--size-eighth) var(--border-style) var(--accent);
 }
 
 .meta #endnotes blockquote.userstuff {
