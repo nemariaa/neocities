@@ -16,6 +16,7 @@ can steal my code instead of yours P:
     --accent-light: #dbeef2;
     --blockquote-background: #cfe0de;
     --title-color: #008D84;
+    --darkmode-button: #bbd4d1;
 
     --text-font: sans-serif;
     --title-font: monospace;
@@ -41,6 +42,17 @@ can steal my code instead of yours P:
 		--size-half: calc(var(--base-size) / 2);
 		--size-one-half: calc(var(--base-size) * 1.5);
 		--size-double: calc(var(--base-size) * 2);
+}
+
+.darkmode {
+    --background: #333;
+    --text-color: #b1b1b1;
+    --accent: #008D84;
+    --accent-dark: #005a54;
+    --accent-light: #0d4440;
+    --blockquote-background: #333;
+    --title-color: #008D84;
+    --darkmode-button: #464646;
 }
 
 * {
@@ -343,6 +355,39 @@ p.message {
     font-size: 0.9em;
 }
 
+/* styling for darkmode button */
+#theme-switch {
+    height: var(--size-quadruple);
+    width: var(--size-quadruple);
+    padding: var(--size-quarter);
+    border-radius: 50%;
+    background-color: var(--darkmode-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* change to fixed if you want the button to scroll with the page & always be visible */
+    top: 15px;
+    right: 15px;
+    border: none;
+}
+
+#theme-switch svg {
+    fill: var(--accent);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+/* there are responsive styles for the darkmode button in the @media sections as well */
+
 /* Spoiler */
 spoiler {
     color: var(--text-color);
@@ -406,5 +451,21 @@ spoiler {
     }
     .userstuff {
         padding: 0.5em;
+    }
+
+    /* darkmode button responsive sizing */
+    #theme-switch {
+        height: var(--size-triple);
+        width: var(--size-triple);
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+	/* darkmode button responsive sizing */	
+    #theme-switch {
+        height: var(--size-double);
+        width: var(--size-double);
     }
 }

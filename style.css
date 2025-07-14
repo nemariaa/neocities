@@ -42,7 +42,7 @@
 	.darkmode{
 		--body-background: #333;
 		--main-background: #333;
-		--text: #999;
+		--text: #b1b1b1;
 		--accent: #008D84;
 		--accent-dark: #005a54;
 		--accent-light: #0d4440;
@@ -289,6 +289,7 @@
 		border-left: var(--size-eighth) var(--main-border-style) var(--accent);
 	}
 
+	/* styling for darkmode button */
 	#theme-switch {
 		height: var(--size-quadruple);
   	width: var(--size-quadruple);
@@ -319,6 +320,7 @@
 	.darkmode #theme-switch svg:last-child {
 		display: block;
 	}
+	/* there are responsive styles for the darkmode button in the @media sections as well */
 
 	spoiler {
 		background: var(--text)!important;
@@ -376,6 +378,7 @@
 			padding: 0 0.2em;
 		}
 
+		/* darkmode button responsive sizing */
 		#theme-switch {
 			height: var(--size-triple);
 			width: var(--size-triple);
@@ -403,7 +406,5 @@
 		#theme-switch {
 			height: var(--size-double);
 			width: var(--size-double);
-			top: 10px;
-			right: 10px;
 		}
 	}
