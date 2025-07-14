@@ -9,20 +9,23 @@ can steal my code instead of yours P:
 
 /* Reset and base styles */
 :root {
-    --background: #fff;
+    --background: #cfe0de;
     --text-color: #333;
+    --accent: #008D84;
+    --accent-dark: #005a54;
+    --accent-light: #dbeef2;
+    --blockquote-background: #cfe0de;
+    --title-color: #008D84;
+
     --text-font: sans-serif;
     --title-font: monospace;
     --subtitle-font: sans-serif;
     --message-font: monospace;
-    --accent: #16a9b8;
-    --accent-dark: #337378;
-    --accent-light: #aadadf;
-    --blockquote-background: #fff;
-    --title-color: #16a9b8;
+
     --title-size: 2.5em;
-    --width: 60em;
+    --width: 95vw;
     --border-size: 2px;
+
     --border-style: solid; /** solid, dotted, dashed, double, hidden, none. cannot be wavy **/
     --link-border-style: dotted; /** solid, dotted, dashed, double, wavy, none **/
     --hr-border-style: dotted; /** solid, dotted, dashed, double, hidden, none. cannot be wavy **/
@@ -83,10 +86,12 @@ li{
 #chapters,
 #afterword {
     width: var(--width);
+    max-width: 60em;
     margin: 0 auto;
+    padding: 0 var(--base-size);
 }
 
-#chapters {
+#chapters .userstuff {
     margin-top: 2em;
     border-top: var(--border-size) var(--border-style) var(--accent);
     padding: 1em;
@@ -94,12 +99,12 @@ li{
 
 #afterword {
     margin: 2em auto;
-    border: var(--border-size) var(--border-style) var(--accent);
+    /* border: var(--border-size) var(--border-style) var(--accent); */
 }
 
-#afterword .meta,
-#afterword .message {
-    padding: 2em 2em 0 2em;
+#afterword .meta {
+    padding: 2em;
+    border: var(--border-size) var(--border-style) var(--accent);
 }
 
 #afterword .message{
@@ -334,7 +339,7 @@ p.message {
     font-size: 0.9em;
 }
 
-.group blockquote.userstuff{
+.group blockquote.userstuff {
     font-size: 0.9em;
 }
 
@@ -346,11 +351,8 @@ spoiler {
 
 /* Responsive styles */
 @media (max-width: 900px) {
-    :root {
-        --width: 95vw;
-    }
-
-    *, html{
+    
+    *, html {
         -webkit-text-size-adjust: none;
     }
 
@@ -368,17 +370,17 @@ spoiler {
     #afterword .message {
         padding: 1em;
     }
-    #afterword {
+    /* #afterword {
         border-top: var(--border-size) var(--border-style) var(--accent);
         border-bottom: var(--border-size) var(--border-style) var(--accent);
         border-left: none;
         border-right: none;
-    }
+    } */
 }
 
 @media (max-width: 600px) {
 
-    *, html{
+    *, html {
         -webkit-text-size-adjust: none;
     }
 
