@@ -42,6 +42,8 @@ can steal my code instead of yours P:
 		--size-half: calc(var(--base-size) / 2);
 		--size-one-half: calc(var(--base-size) * 1.5);
 		--size-double: calc(var(--base-size) * 2);
+        --size-triple: calc(var(--base-size) * 3);
+		--size-quadruple: calc(var(--base-size) * 4);
 }
 
 .darkmode {
@@ -61,7 +63,6 @@ can steal my code instead of yours P:
     box-sizing: border-box;
 }
 
-html,
 body {
     font: normal 1em/160% var(--text-font);
     color: var(--text-color);
@@ -233,7 +234,7 @@ a:focus {
 }
 
 #masterlist-link {
-    margin: 1em 0 0 1em;
+    padding: 1em 0 0 1.5em;
     font-size: 0.8em;
 }
 
