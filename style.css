@@ -5,7 +5,7 @@
 		--main-background: #cfe0de;
 		--text: #333;
 		--accent: #008D84;
-		--accent-dark: #005a54;
+		--accent-dark: #007c74;
 		--accent-light: #dbeef2;
 		--highlight-color: #aee6ec;
 		--fandom-button: #bbd4d1;
@@ -42,9 +42,9 @@
 	.darkmode{
 		--body-background: #333;
 		--main-background: #333;
-		--text: #b1b1b1;
-		--accent: #008D84;
-		--accent-dark: #005a54;
+		--text: #e0e0e0;
+		--accent: #00b1a5;
+		--accent-dark: #009c92;
 		--accent-light: #0d4440;
 		--fandom-button: #464646;
 	}
