@@ -9,14 +9,14 @@ can steal my code instead of yours P:
 
 /* Reset and base styles */
 :root {
-    --background: #cfe0de;
+    --background: #f0e7f8;
     --text-color: #333;
-    --accent: #008D84;
-    --accent-dark: #005a54;
-    --accent-light: #dbeef2;
-    --blockquote-background: #cfe0de;
-    --title-color: #008D84;
-    --darkmode-button: #bbd4d1;
+    --accent: #7533b3;
+    --accent-dark: #20083B;
+    --accent-light: #deccec;
+    --blockquote-background: #ded1eb;
+    --title-color: #894CC1;
+    --darkmode-button: #deccec;
 
     --text-font: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif;
     --title-font: monospace;
@@ -49,11 +49,11 @@ can steal my code instead of yours P:
 .darkmode {
     --background: #333;
     --text-color: #e0e0e0;
-    --accent: #00b1a5;
-    --accent-dark: #009c92;
-    --accent-light: #0d4440;
+    --accent: #aa7cd4;
+    --accent-dark: #b796d6;
+    --accent-light: #440c75;
     --blockquote-background: #333;
-    --title-color: #00b1a5;
+    --title-color: #aa7cd4;
     --darkmode-button: #464646;
 }
 

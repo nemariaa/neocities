@@ -1,14 +1,14 @@
 	:root {
 		/** you can change all this to fit your own styles without having to touch the rest of the code! **/
 
-		--body-background: #cfe0de;
-		--main-background: #cfe0de;
+		--body-background: #f0e7f8;
+		--main-background: #f0e7f8;
 		--text: #333;
-		--accent: #008D84;
-		--accent-dark: #007c74;
-		--accent-light: #dbeef2;
-		--highlight-color: #aee6ec;
-		--fandom-button: #bbd4d1;
+		--accent: #7533b3;
+		--accent-dark: #440c75;
+		--accent-light: #deccec;
+		--highlight-color: #CE9CFF;
+		--fandom-button: #deccec;
 
 		/** these are default browser font styles, but you can name specific fonts, ex. 'Georgia'**/
 		--main-font: sans-serif;
@@ -43,9 +43,9 @@
 		--body-background: #333;
 		--main-background: #333;
 		--text: #e0e0e0;
-		--accent: #00b1a5;
-		--accent-dark: #009c92;
-		--accent-light: #0d4440;
+		--accent: #aa7cd4;
+		--accent-dark: #b796d6;
+		--accent-light: #440c75;
 		--fandom-button: #464646;
 	}
 
